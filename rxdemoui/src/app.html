@@ -1,0 +1,49 @@
+<template>
+  <div class="header">
+    <h1>${message}</h1>
+  </div>
+  <form>
+    <fieldset>
+      <legend>Medication</legend>
+      <div class="field-column">
+        <label for="medication-name">Drug Name</label>
+        <input list="medication-name" name="medication-name"/>
+        <datalist id="medication-name">
+          <option value="Aspirin">
+          <option value="Bactrim">
+        </datalist>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Prescription</legend>
+      <div class="field-column">
+        <label for="dose-amount">Dose Amount</label>
+        <input id="dose-amount"/>
+      </div>
+      <div class="field-column">
+        <label for="dose-unit">Dose Unit</label>
+        <input id="dose-unit"/>
+      </div>
+      <div class="field-column">
+        <label for="route">Route</label>
+        <input id="route"/>
+      </div>
+      <div class="field-column">
+        <label for="frequency">Frequency</label>
+        <input id="frequency"/>
+      </div>
+      <div class="field-column ending-field-column">
+        <label for="duration">Duration</label>
+        <input id="duration"/>
+      </div>
+      <br class="clear">
+    </fieldset>
+    <br>
+    <div if.bind="warningMessage" class="alert">
+      ${warningMessage}
+    </div>
+    <button class="formButton">Add Rx to Cart</button>
+    <button class="formButton">Cancel</button>
+   </form>
+
+</template>
