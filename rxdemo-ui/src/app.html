@@ -18,23 +18,23 @@
       <legend>Prescription</legend>
       <div class="field-column">
         <label for="dose-amount">Dose Amount</label>
-        <input id="dose-amount"/>
+        <input id="dose-amount" value.bind="currentRx.doseAmount"/>
       </div>
       <div class="field-column">
         <label for="dose-unit">Dose Unit</label>
-        <input id="dose-unit"/>
+        <input id="dose-unit" value.bind="currentRx.doseUnit"/>
       </div>
       <div class="field-column">
         <label for="route">Route</label>
-        <input id="route"/>
+        <input id="route" value.bind="currentRx.route"/>
       </div>
       <div class="field-column">
         <label for="frequency">Frequency</label>
-        <input id="frequency"/>
+        <input id="frequency" value.bind="currentRx.frequency"/>
       </div>
       <div class="field-column ending-field-column">
         <label for="duration">Duration</label>
-        <input id="duration"/>
+        <input id="duration" value.bind="currentRx.duration"/>
       </div>
       <br class="clear">
     </fieldset>
@@ -42,7 +42,7 @@
     <div if.bind="warningMessage" class="alert">
       ${warningMessage}
     </div>
-    <button class="formButton">Add Rx to Cart</button>
+    <button class="formButton" click.delegate="submitRx()" disabled.bind="!validRx">Add Rx to Cart</button>
     <button class="formButton">Cancel</button>
    </form>
 
