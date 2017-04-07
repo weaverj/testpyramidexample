@@ -7,6 +7,7 @@ import {inject} from 'aurelia-framework';
 export class App {
 
   currentRx;
+  meesage;
 
   constructor(rxApi) {
     this.rxApi = rxApi;
