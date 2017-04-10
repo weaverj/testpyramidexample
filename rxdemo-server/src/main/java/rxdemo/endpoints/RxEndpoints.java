@@ -1,20 +1,24 @@
 package rxdemo.endpoints;
 
+import com.google.gson.Gson;
+import rxdemo.service.DrugDatabase;
 import spark.Request;
 import spark.Response;
 
 import static spark.Spark.*;
 
-public class HelloWorldEndpoints
+public class RxEndpoints
 {
 	public static void main(String[] args) {
 
-		get("/hello", (req, res) -> "Hello World");
+		Gson gson = new Gson();
 
 		post("/rx", (request, response) -> {
 			System.out.println(request.body());
 			return "{}";
 		});
+
+		get("/rx/drugs", (request, response) -> DrugDatabase.getDrugsAvailableForPrescribing(), gson::toJson);
 
 
 		before((request, response) -> {
@@ -37,5 +41,4 @@ public class HelloWorldEndpoints
 		});
 
 	}
-
 }

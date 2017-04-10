@@ -1,5 +1,7 @@
 package rxdemo.model;
 
+import rxdemo.service.EDrugClassification;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,9 +10,9 @@ public class DispensableDrug
 {
 	private int drugId;
 	private String name;
-	private Set<String> classifications;
+	private Set<EDrugClassification> classifications;
 
-	public DispensableDrug(int drugId, String name, String[] classifications) {
+	public DispensableDrug(int drugId, String name, EDrugClassification[] classifications) {
 		this.drugId = drugId;
 		this.name = name;
 		this.classifications = new HashSet<>();
@@ -27,7 +29,7 @@ public class DispensableDrug
 		return name;
 	}
 
-	public Set<String> getClassifications()
+	public Set<EDrugClassification> getClassifications()
 	{
 		return classifications;
 	}
