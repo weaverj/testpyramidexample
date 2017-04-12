@@ -44,6 +44,10 @@ input, label {
   display:block;
 }
 
+input, select, textarea {
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
 
 .ending-field-column {
   float:left;

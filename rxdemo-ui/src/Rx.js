@@ -1,5 +1,5 @@
 export class Rx {
-  medication;
+  drug;
   doseAmount;
   doseUnit;
   route;
@@ -7,7 +7,7 @@ export class Rx {
   duration;
 
   constructor() {
-    this.medication = "";
+    this.drug = {};
     this.doseAmount = "";
     this.doseUnit = "";
     this.route = "";

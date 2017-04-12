@@ -18,7 +18,7 @@ public class RxEndpoints
 			return "{}";
 		});
 
-		get("/rx/drugs", (request, response) -> DrugDatabase.getDrugsAvailableForPrescribing(), gson::toJson);
+		get("/drugs", (request, response) -> DrugDatabase.getDrugsAvailableForPrescribing(), gson::toJson);
 
 
 		before((request, response) -> {
