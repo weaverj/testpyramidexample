@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  Represents a vendor drug database - a stub.
+ *  Represents a vendor drug database rather than application code.
  */
 public class DrugDatabase
 {
@@ -19,6 +19,19 @@ public class DrugDatabase
 
 	public static List<DispensableDrug> getDrugsAvailableForPrescribing() {
 		return drugsInDatabase;
+	}
+
+	public static List<DispensableDrug> getDrugsInClassification(int classCode) {
+		ArrayList<DispensableDrug> matchingDrugs = new ArrayList<>();
+        for (DispensableDrug drug : drugsInDatabase) {
+            for (EDrugClassification classification : drug.getClassifications()) {
+                if (classCode == classification.getEtcClassificationCode()) {
+                    matchingDrugs.add(drug);
+                    break;
+                }
+            }
+        }
+        return matchingDrugs;
 	}
 
 	private static void loadDrugData() {
@@ -37,9 +50,13 @@ public class DrugDatabase
 				new EDrugClassification[]{EDrugClassification.NARCOTIC_ANTHISTAMINE} ));
 		drugsInDatabase.add(new DispensableDrug(700, "lisinopril",
 				new EDrugClassification[]{EDrugClassification.ACE_INHIBITORS} ));
-		drugsInDatabase.add(new DispensableDrug(800, "oxycodone",
+        drugsInDatabase.add(new DispensableDrug(750, "lorazepam",
+                new EDrugClassification[]{EDrugClassification.ANTIANXIETY} ));
+        drugsInDatabase.add(new DispensableDrug(800, "methadone",
+                new EDrugClassification[]{EDrugClassification.ANALGESICS_NARCOTIC} ));
+		drugsInDatabase.add(new DispensableDrug(900, "oxycodone",
 				new EDrugClassification[]{EDrugClassification.ANALGESICS_NARCOTIC} ));
-		drugsInDatabase.add(new DispensableDrug(900, "simvastatin",
+		drugsInDatabase.add(new DispensableDrug(1000, "simvastatin",
 				new EDrugClassification[]{EDrugClassification.ANTIHYPERLIPIDEMICS} ));
 	}
 

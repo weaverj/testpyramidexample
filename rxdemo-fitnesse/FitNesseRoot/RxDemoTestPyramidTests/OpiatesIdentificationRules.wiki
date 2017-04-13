@@ -1,6 +1,11 @@
 ---
 Test
 ---
-|Query: Therapeutic Classes Considered Opiates    |
-|Therapeutic Class Code|Description|Drugs Included|
-|                      |           |              |
+!2 !c Therapeutic Drug Classes to Consider Opiates
+Exact list of classes follows, with drugs in the vendor drug database currently matching those classes included as informational purposes.  Individual drugs are not validated by this test as those will change over time, whereas the therapeutic classes that should be considered opiates will only change per explicit requirement change.
+
+|Query: Therapeutic Classes Considered Opiates                                        |
+|Therapeutic Class Code|Description                                    |Drugs Included|
+|582                   |Analgesics - Narcotic                          |              |
+|523                   |Antianxiety Agent - Benzodiazepines            |              |
+|338                   |Narcotic Antitussive-Antihistamine Combinations|              |
