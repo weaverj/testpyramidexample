@@ -1,4 +1,13 @@
 ---
 Suite
 ---
-!contents -R2 -g -p -f -h
+>SetUp
+
+|[[Opiates Identification][>OpiatesIdentificationRules]]|Therapeutic classificaitons constituting opiates concept for state law|
+|[[Prescription Validation Rules][>RxValidationRules]]  |Prescription validation rules                                         |
+
+
+
+!define TEST_SYSTEM {slim}
+!path ../rxdemo-server/target/classes
+!path lib/*.jar

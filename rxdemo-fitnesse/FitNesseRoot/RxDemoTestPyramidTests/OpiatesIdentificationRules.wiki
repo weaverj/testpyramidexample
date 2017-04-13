@@ -1,0 +1,6 @@
+---
+Test
+---
+|Query: Therapeutic Classes Considered Opiates    |
+|Therapeutic Class Code|Description|Drugs Included|
+|                      |           |              |

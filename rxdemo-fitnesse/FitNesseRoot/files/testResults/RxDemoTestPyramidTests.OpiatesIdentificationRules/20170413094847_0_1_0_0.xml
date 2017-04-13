@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20161106</FitNesseVersion>
+  <rootPath>RxDemoTestPyramidTests.OpiatesIdentificationRules</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2017-04-13T09:48:47-05:00</date>
+    <runTimeInMillis>44</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RxDemoTestPyramidTests.SetUp"&gt;.RxDemoTestPyramidTests.SetUp&lt;/a&gt; &lt;a href="RxDemoTestPyramidTests.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;rxdemo.fitnesse&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;Query: Therapeutic Classes Considered Opiates&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Therapeutic Class Code&lt;/td&gt;
+		&lt;td&gt;Description&lt;/td&gt;
+		&lt;td&gt;Drugs Included&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;[] &lt;span class="fail"&gt;missing&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>OpiatesIdentificationRules</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='rxdemo.fitnesse'}</instruction>
+        <slimResult>pass(rxdemo.fitnesse)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>rxdemo.fitnesse</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='queryTable_1_0', instruction='make', instanceName='queryTable_1', className='TherapeuticClassesConsideredOpiates', args=[]}</instruction>
+        <slimResult>pass(Query: Therapeutic Classes Considered Opiates)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>queryTable_1_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Query: Therapeutic Classes Considered Opiates</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='queryTable_1_2', instruction='call', instanceName='queryTable_1', methodName='query', args=[]}</instruction>
+        <slimResult>fail()</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>queryTable_1_2</instructionId>
+                              <type>QueryTableExpectation</type>
+                                      </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp /Users/jimweaver/Projects/rxdemo/rxdemo-fitnesse/fitnesse-standalone.jar:../rxdemo-server/target/classes:lib/*.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>288</totalRunTimeInMillis>
+</testResults>
+
