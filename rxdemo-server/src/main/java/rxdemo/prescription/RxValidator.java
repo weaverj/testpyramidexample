@@ -1,5 +1,4 @@
 package rxdemo.prescription;
 
-public class RxValidator
-{
+public class RxValidator {
 }

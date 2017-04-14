@@ -1,7 +1,6 @@
 package rxdemo.prescription;
 
-public class OpiateDurationValidationRule
-{
+public class OpiateDurationValidationRule {
 }
 
 

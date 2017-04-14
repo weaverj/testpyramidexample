@@ -1,5 +1,4 @@
 package rxdemo.prescription;
 
-public class RequiredRxFieldsValidationRule
-{
+public class RequiredRxFieldsValidationRule {
 }

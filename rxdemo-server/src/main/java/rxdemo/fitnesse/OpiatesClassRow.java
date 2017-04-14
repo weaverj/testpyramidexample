@@ -6,19 +6,19 @@ import java.util.List;
 
 public class OpiatesClassRow {
 
-    private int classCode;
-    private String description;
-    private List<DispensableDrug> includedDrugs;
+   private int classCode;
+   private String description;
+   private List<DispensableDrug> includedDrugs;
 
-    public int getClassCode() {
-        return classCode;
-    }
+   public int getClassCode() {
+      return classCode;
+   }
 
-    public String getDescription() {
-        return description;
-    }
+   public String getDescription() {
+      return description;
+   }
 
-    public List<DispensableDrug> getIncludedDrugs() {
-        return includedDrugs;
-    }
+   public List<DispensableDrug> getIncludedDrugs() {
+      return includedDrugs;
+   }
 }

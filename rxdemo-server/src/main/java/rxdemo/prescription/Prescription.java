@@ -1,5 +1,4 @@
 package rxdemo.prescription;
 
-public class Prescription
-{
+public class Prescription {
 }

@@ -5,10 +5,10 @@ import java.util.List;
 
 public class QueryFixture {
 
-    protected List<String> buildColumn(String columnName, String value) {
-        ArrayList<String> column = new ArrayList<>();
-        column.add(columnName);
-        column.add(value);
-        return column;
-    }
+   protected List<String> buildColumn(String columnName, String value) {
+      ArrayList<String> column = new ArrayList<>();
+      column.add(columnName);
+      column.add(value);
+      return column;
+   }
 }
