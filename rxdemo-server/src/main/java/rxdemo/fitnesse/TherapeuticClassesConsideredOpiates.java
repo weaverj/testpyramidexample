@@ -1,9 +1,9 @@
 package rxdemo.fitnesse;
 
-import rxdemo.model.DispensableDrug;
-import rxdemo.model.OpiatesByStateLawDrugConcept;
-import rxdemo.service.DrugDatabase;
-import rxdemo.service.EDrugClassification;
+import rxdemo.drug.DispensableDrug;
+import rxdemo.drug.OpiatesDrugConcept;
+import rxdemo.vendordata.DrugDatabase;
+import rxdemo.vendordata.EDrugClassification;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 public class TherapeuticClassesConsideredOpiates extends QueryFixture {
 
     public List<List<List<String>>> query() {
-        return asList(OpiatesByStateLawDrugConcept.getClassificationsInConcept());
+        return asList(OpiatesDrugConcept.getClassificationsInConcept());
     }
 
     private List<List<List<String>>> asList(List<EDrugClassification> opiateClasses) {

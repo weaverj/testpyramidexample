@@ -1,4 +1,4 @@
-package rxdemo.model;
+package rxdemo.drug;
 
 public interface IMedication
 {

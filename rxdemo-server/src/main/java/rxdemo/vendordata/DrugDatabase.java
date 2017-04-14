@@ -1,6 +1,6 @@
-package rxdemo.service;
+package rxdemo.vendordata;
 
-import rxdemo.model.DispensableDrug;
+import rxdemo.drug.DispensableDrug;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package rxdemo.service;
+package rxdemo.prescription;
 
 public class RequiredRxFieldsValidationRule
 {

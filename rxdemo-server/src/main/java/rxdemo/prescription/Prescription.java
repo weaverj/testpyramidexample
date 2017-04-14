@@ -1,4 +1,4 @@
-package rxdemo.model;
+package rxdemo.prescription;
 
 public class Prescription
 {

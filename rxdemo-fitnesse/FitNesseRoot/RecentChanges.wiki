@@ -1,3 +1,4 @@
+|RxDemoTestPyramidTests.RxValidationRules||16:18:52 Thu, Apr 13, 2017|
 |RxDemoTestPyramidTests.OpiatesIdentificationRules||15:33:14 Thu, Apr 13, 2017|
 |RxDemoTestPyramidTests||09:48:38 Thu, Apr 13, 2017|
 |RxDemoTestPyramidTests.SetUp||14:08:38 Wed, Apr 12, 2017|

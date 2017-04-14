@@ -1,7 +1,7 @@
 package rxdemo.endpoints;
 
 import com.google.gson.Gson;
-import rxdemo.service.DrugDatabase;
+import rxdemo.vendordata.DrugDatabase;
 import spark.Request;
 import spark.Response;
 

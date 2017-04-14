@@ -1,12 +1,12 @@
-package rxdemo.model;
+package rxdemo.drug;
 
-import rxdemo.service.EDrugClassification;
+import rxdemo.vendordata.EDrugClassification;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-public class OpiatesByStateLawDrugConcept {
+public class OpiatesDrugConcept {
 
     private static EDrugClassification[] opiateClasses = new EDrugClassification[]{
             EDrugClassification.ANTIANXIETY,

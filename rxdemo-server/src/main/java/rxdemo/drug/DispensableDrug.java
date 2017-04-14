@@ -1,6 +1,6 @@
-package rxdemo.model;
+package rxdemo.drug;
 
-import rxdemo.service.EDrugClassification;
+import rxdemo.vendordata.EDrugClassification;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,6 +1,6 @@
 package rxdemo.fitnesse;
 
-import rxdemo.model.DispensableDrug;
+import rxdemo.drug.DispensableDrug;
 
 import java.util.List;
 

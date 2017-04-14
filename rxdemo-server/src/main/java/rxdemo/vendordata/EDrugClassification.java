@@ -1,4 +1,4 @@
-package rxdemo.service;
+package rxdemo.vendordata;
 
 // highly simplified, non-hiearchical drug classification concepts
 

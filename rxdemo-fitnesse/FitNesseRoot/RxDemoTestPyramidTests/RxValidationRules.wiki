@@ -1,0 +1,4 @@
+!2 !c Prescription Validation Rules
+|Required Field Rules    ||
+|Parseable Duration Rules||
+|Opiate Duration Rules   ||
