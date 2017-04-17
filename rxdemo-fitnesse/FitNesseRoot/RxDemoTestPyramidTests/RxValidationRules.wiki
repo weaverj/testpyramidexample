@@ -1,4 +1,9 @@
+---
+Suite
+---
 !2 !c Prescription Validation Rules
-|Required Field Rules    ||
-|Parseable Duration Rules||
-|Opiate Duration Rules   ||
+
+|[[Required Field Rules][>RequiredFieldRules]]      |Prescriptions must include required fields.         |
+|[[Parseable Duration Rules][>DurationParsingRules]]|Prescription Duration must be translatable to days. |
+|[[Opiate Duration Rules][>OpiateDurationRules]]    |Opiates may only be prescribed for certain duration.|
+
