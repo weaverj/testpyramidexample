@@ -1,0 +1,27 @@
+---
+Test
+---
+!2 !c Duration must parse to days
+
+
+Strings entered by clinician in duration must be translatable to a number of days to be sent electronically.
+
+|!-DurationParsesToDays -!             |
+|Duration|days?|# comment              |
+|1 day   |1    |singular day           |
+|10 days |10   |plural days            |
+|1 week  |7    |singular week          |
+|2 weeks |14   |plural weeks           |
+|1 month |30   |singular month         |
+|3 months|90   |plural months          |
+|once    |1    |single dose medications|
+|10 Days |10   |case insensitive       |
+
+Unparseable durations should return zero days
+
+|!-DurationParsesToDays -!              |
+|Duration|days?|# comment               |
+|q day   |0    |number value not present|
+|2 daks  |0    |unit typo               |
+|erk     |0    |single word not once    |
+|1       |0    |value without unit      |

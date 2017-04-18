@@ -1,3 +1,4 @@
+|RxDemoTestPyramidTests.RxValidationRules.DurationParsingRules||17:22:18 Tue, Apr 18, 2017|
 |RxDemoTestPyramidTests.RxValidationRules.RequiredFieldRules||17:27:44 Mon, Apr 17, 2017|
 |RxDemoTestPyramidTests.RxValidationRules||12:49:22 Mon, Apr 17, 2017|
 |RxDemoTestPyramidTests.OpiatesIdentificationRules||15:33:14 Thu, Apr 13, 2017|
