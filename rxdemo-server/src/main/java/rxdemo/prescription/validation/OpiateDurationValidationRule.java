@@ -12,8 +12,8 @@ public class OpiateDurationValidationRule implements IRxValidationRule {
 
    @Override
    public RxValidationResult validateAgainstRule(Prescription rx) {
-      RxValidationResult result = new RxValidationResult();
-      if (isForOpioid(rx) && durationInvalidForOpioid(rx)) {
+       RxValidationResult result = new RxValidationResult();
+      if (rx.getDrug() != null && isForOpioid(rx) && durationInvalidForOpioid(rx)) {
          result.addInvalidComponent(ERxComponent.DURATION);
          result.setMessage(MESSAGE);
       }

@@ -38,8 +38,10 @@
       <br class="clear">
     </fieldset>
     <br>
-    <div if.bind="warningMessage" class="alert">
-      ${warningMessage}
+    <div if.bind="errorMessages.length > 0" class="alert">
+      <div repeat.for="message of errorMessages">
+        ${message}
+      </div>
     </div>
     <button class="formButton" click.delegate="submitRx()" disabled.bind="!validRx">Add Rx to Cart</button>
     <button class="formButton">Cancel</button>

@@ -7,28 +7,30 @@ import {inject} from 'aurelia-framework';
 export class App {
 
   currentRx;
-  warningMessage;
   availableDrugs;
   selectedDrug;
+  successMessage;
+  errorMessages;
+  fieldsInError;
 
   constructor(rxApi) {
     this.rxApi = rxApi;
-    this.warningMessage = "Test";
     this.currentRx = new Rx();
+    this.errorMessages = [];
+    this.fieldsInError = [];
   }
+
 
   validRx() {
     return true;
   }
 
   submitRx() {
-    console.log("Submitting Rx");
-    console.log("Selected drug is: ");
-    console.log(this.selectedDrug);
     this.rxApi.sendRx(this.currentRx)
       .then(response => response.json())
       .then(response => {
         console.log(response);
+        this.mapValidationResponse(response);
       });
   }
 
@@ -42,5 +44,14 @@ export class App {
   attached() {
     console.log("view model attached to dom");
     this.loadDrugs();
+  }
+
+  mapValidationResponse(response) {
+    if (response.valid === true) {
+      this.successMessage = "Prescription succesfully transmitted.";
+      this.errorMessages = [];
+      return;
+    }
+    this.errorMessages = response.messages;
   }
 }

@@ -1,10 +1,11 @@
 package rxdemo.prescription.validation;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import rxdemo.prescription.Prescription;
 import rxdemo.vendordata.DrugDatabase;
+
+import static org.junit.Assert.*;
 
 public class OpiateDurationValidationRuleShould {
 
@@ -24,8 +25,8 @@ public class OpiateDurationValidationRuleShould {
 
       RxValidationResult result = rule.validateAgainstRule(rx);
 
-      Assert.assertFalse(result.isValid());
-      Assert.assertEquals(OpiateDurationValidationRule.MESSAGE, result.getMessage());
+      assertFalse(result.isValid());
+      assertEquals(OpiateDurationValidationRule.MESSAGE, result.getMessage());
    }
 
    @Test
@@ -35,8 +36,8 @@ public class OpiateDurationValidationRuleShould {
 
       RxValidationResult result = rule.validateAgainstRule(rx);
 
-      Assert.assertFalse(result.isValid());
-      Assert.assertEquals(OpiateDurationValidationRule.MESSAGE, result.getMessage());
+      assertFalse(result.isValid());
+      assertEquals(OpiateDurationValidationRule.MESSAGE, result.getMessage());
    }
 
    @Test
@@ -46,8 +47,19 @@ public class OpiateDurationValidationRuleShould {
 
       RxValidationResult result = rule.validateAgainstRule(rx);
 
-      Assert.assertTrue(result.isValid());
-      Assert.assertNull(result.getMessage());
+      assertTrue(result.isValid());
+      assertNull(result.getMessage());
+   }
+
+   @Test
+   public void returnValidIfDrugNotIndicatedYet() {
+      rx.setDuration("31 days");
+      rx.setDrug(null);
+
+      RxValidationResult result = rule.validateAgainstRule(rx);
+
+      assertTrue(result.isValid());
+      assertNull(result.getMessage());
    }
 
 }
