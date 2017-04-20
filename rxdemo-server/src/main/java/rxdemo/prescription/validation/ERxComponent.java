@@ -1,4 +1,4 @@
-package rxdemo.prescription;
+package rxdemo.prescription.validation;
 
 public enum ERxComponent {
 

@@ -1,8 +1,10 @@
+|RxDemoTestPyramidTests.RxValidationRules.OpiateDurationRules||13:45:19 Wed, Apr 19, 2017|
+|RxDemoTestPyramidTests.RxValidationRules||10:53:49 Wed, Apr 19, 2017|
+|RxDemoTestPyramidTests.DurationToDays||10:52:43 Wed, Apr 19, 2017|
+|RxDemoTestPyramidTests.SetUp||10:45:48 Wed, Apr 19, 2017|
+|RxDemoTestPyramidTests||10:26:54 Wed, Apr 19, 2017|
 |RxDemoTestPyramidTests.RxValidationRules.DurationParsingRules||17:22:18 Tue, Apr 18, 2017|
 |RxDemoTestPyramidTests.RxValidationRules.RequiredFieldRules||17:27:44 Mon, Apr 17, 2017|
-|RxDemoTestPyramidTests.RxValidationRules||12:49:22 Mon, Apr 17, 2017|
 |RxDemoTestPyramidTests.OpiatesIdentificationRules||15:33:14 Thu, Apr 13, 2017|
-|RxDemoTestPyramidTests||09:48:38 Thu, Apr 13, 2017|
-|RxDemoTestPyramidTests.SetUp||14:08:38 Wed, Apr 12, 2017|
 |OpiateBenzodiazepinesIdentification||13:56:40 Wed, Apr 12, 2017|
 |FrontPage||13:50:22 Wed, Apr 12, 2017|

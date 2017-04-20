@@ -17,7 +17,7 @@ public class OpiatesDrugConcept {
       return Arrays.asList(opiateClasses);
    }
 
-   static boolean isDrugInConcept(DispensableDrug drug) {
+   public static boolean isDrugInConcept(DispensableDrug drug) {
       HashSet<EDrugClassification> classesForDrug = new HashSet<>(drug.getClassifications());
       classesForDrug.retainAll(Arrays.asList(opiateClasses));
       return !classesForDrug.isEmpty();

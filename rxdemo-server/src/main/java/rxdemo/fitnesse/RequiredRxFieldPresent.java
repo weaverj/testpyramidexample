@@ -3,8 +3,8 @@ package rxdemo.fitnesse;
 import org.apache.commons.lang3.StringUtils;
 import rxdemo.drug.DispensableDrug;
 import rxdemo.prescription.Prescription;
-import rxdemo.prescription.RequiredRxFieldsValidationRule;
-import rxdemo.prescription.RxValidationResult;
+import rxdemo.prescription.validation.RequiredRxFieldsValidationRule;
+import rxdemo.prescription.validation.RxValidationResult;
 import rxdemo.vendordata.EDrugClassification;
 
 public class RequiredRxFieldPresent {

@@ -1,8 +1,12 @@
-package rxdemo.prescription;
+package rxdemo.prescription.validation;
 
 import org.junit.Before;
 import org.junit.Test;
 import rxdemo.drug.DispensableDrug;
+import rxdemo.prescription.Prescription;
+import rxdemo.prescription.validation.ERxComponent;
+import rxdemo.prescription.validation.RequiredRxFieldsValidationRule;
+import rxdemo.prescription.validation.RxValidationResult;
 import rxdemo.vendordata.EDrugClassification;
 
 import static org.junit.Assert.*;

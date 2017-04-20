@@ -4,6 +4,7 @@ Suite
 >SetUp
 
 |[[Opiates Identification][>OpiatesIdentificationRules]]|Therapeutic classificaitons constituting opiates concept for state law|
+|[[Duration Parsing to Days][>DurationToDays]]          |Translation of user-entered duration strings to number of days        |
 |[[Prescription Validation Rules][>RxValidationRules]]  |Prescription validation rules                                         |
 
 

@@ -33,6 +33,15 @@ public class DrugDatabase {
       return matchingDrugs;
    }
 
+   public static DispensableDrug getDrugByName(String name) {
+      for (DispensableDrug dispensableDrug : drugsInDatabase) {
+         if (name.equals(dispensableDrug.getName())) {
+            return dispensableDrug;
+         }
+      }
+      return null;
+   }
+
    private static void loadDrugData() {
       drugsInDatabase = new ArrayList<>();
       drugsInDatabase.add(new DispensableDrug(100, "aspirin",

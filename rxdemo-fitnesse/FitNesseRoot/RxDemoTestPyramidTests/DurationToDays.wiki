@@ -1,13 +1,13 @@
 ---
 Test
 ---
-!2 !c Duration must parse to days
+!2 !c Duration to days calculation rules
+
+Strings entered by clinician in duration should be translated to a number of days when possible as defined below.
 
 
-Strings entered by clinician in duration must be translatable to a number of days to be sent electronically.
-
-|!-DurationParsesToDays -!             |
-|Duration|days?|# comment              |
+|Decision: duration parses to days     |
+|duration|days?|# comment              |
 |1 day   |1    |singular day           |
 |10 days |10   |plural days            |
 |1 week  |7    |singular week          |
@@ -17,9 +17,9 @@ Strings entered by clinician in duration must be translatable to a number of day
 |once    |1    |single dose medications|
 |10 Days |10   |case insensitive       |
 
-Unparseable durations should return zero days
+Un-parseable durations should translate to zero days.
 
-|!-DurationParsesToDays -!              |
+|Decision: duration parses to days      |
 |Duration|days?|# comment               |
 |q day   |0    |number value not present|
 |2 daks  |0    |unit typo               |

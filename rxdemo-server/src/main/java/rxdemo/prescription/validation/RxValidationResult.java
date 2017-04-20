@@ -1,4 +1,4 @@
-package rxdemo.prescription;
+package rxdemo.prescription.validation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class RxValidationResult {
    private String message;
    private List<ERxComponent> componentsInvalid;
 
-   RxValidationResult() {
+   public RxValidationResult() {
       this.componentsInvalid = new ArrayList<>();
    }
 
@@ -24,11 +24,11 @@ public class RxValidationResult {
       return componentsInvalid;
    }
 
-   void addInvalidComponent(ERxComponent component) {
+   public void addInvalidComponent(ERxComponent component) {
       componentsInvalid.add(component);
    }
 
-   void setMessage(String message) {
+   public void setMessage(String message) {
       this.message = message;
    }
 }

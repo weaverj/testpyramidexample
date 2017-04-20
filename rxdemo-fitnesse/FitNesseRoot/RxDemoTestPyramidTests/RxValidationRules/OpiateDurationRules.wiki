@@ -1,0 +1,22 @@
+---
+Test
+---
+Opiates Duration Limitiation Rules
+
+Opiates and Benzodiazepenes (!see .RxDemoTestPyramidTests.OpiatesIdentificationRules) may only be prescribed for up to a duration of thirty days.
+
+Scenarios that pass validation:
+
+|Decision: opioid rule allows prescribing                             |
+|drug     |duration|valid?|message?|#comment                          |
+|methadone|10 days |true  |        |opioid under 30 days - no error   |
+|oxycodone|30 days |true  |        |opioid at 30 days - no error      |
+|aspirin  |40 days |true  |        |non-opioid over 30 days - no error|
+
+
+Stop user from prescribing in these Scenarios:
+
+|Decision: opioid rule allows prescribing                                                                                                                                                                                     |
+|drug     |duration|valid?|message?                                                                                                                                                          |#comment                        |
+|methadone|31 days |false |Prescibing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod over 30 days              |
+|methadone|6 dags  |false |Prescibing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod with unrecognized duration|

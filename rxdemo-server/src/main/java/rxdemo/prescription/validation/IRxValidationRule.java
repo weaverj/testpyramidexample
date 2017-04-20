@@ -1,4 +1,6 @@
-package rxdemo.prescription;
+package rxdemo.prescription.validation;
+
+import rxdemo.prescription.Prescription;
 
 public interface IRxValidationRule {
 

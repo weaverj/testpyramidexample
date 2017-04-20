@@ -1,6 +1,7 @@
-package rxdemo.prescription;
+package rxdemo.prescription.validation;
 
 import org.apache.commons.lang3.StringUtils;
+import rxdemo.prescription.Prescription;
 
 import java.util.List;
 

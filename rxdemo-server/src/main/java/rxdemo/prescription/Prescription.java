@@ -58,4 +58,8 @@ public class Prescription {
    public void setDuration(String duration) {
       this.duration = duration;
    }
+
+   public int getDurationAsDays() {
+      return DurationParser.parseDays(this.duration);
+   }
 }
