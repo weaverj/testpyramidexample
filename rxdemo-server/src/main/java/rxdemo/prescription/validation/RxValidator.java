@@ -17,7 +17,7 @@ public class RxValidator {
       defaultValidator = new RxValidator(defaultRules);
    }
 
-   public static RxValidator getDefaultValidaor() {
+   public static RxValidator getDefaultValidator() {
       return defaultValidator;
    }
 

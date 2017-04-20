@@ -1,6 +1,9 @@
 package rxdemo.endpoints;
 
 import com.google.gson.Gson;
+import rxdemo.commands.ValidatePrescriptionCommand;
+import rxdemo.prescription.Prescription;
+import rxdemo.prescription.validation.RxValidator;
 import rxdemo.vendordata.DrugDatabase;
 import spark.Request;
 import spark.Response;
@@ -13,9 +16,10 @@ public class RxEndpoints {
       Gson gson = new Gson();
 
       post("/rx", (request, response) -> {
-         System.out.println(request.body());
-         return "{}";
-      });
+         ValidatePrescriptionCommand command = new ValidatePrescriptionCommand(RxValidator.getDefaultValidator());
+         Prescription rx = gson.fromJson(request.body(), Prescription.class);
+         return command.validatePrescription(rx);
+      }, gson::toJson);
 
       get("/drugs", (request, response) -> DrugDatabase.getDrugsAvailableForPrescribing(), gson::toJson);
 
