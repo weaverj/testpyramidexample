@@ -60,9 +60,25 @@ input, select, textarea {
 .alert {
   padding: 20px;
   border: 1px solid red;
-  background-color: pink;
+  background-color: lightpink;
   color: black;
   margin-bottom: 15px;
+}
+
+.success {
+  padding: 20px;
+  border: 1px solid darkgreen;
+  background-color: lightgreen;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.error-input {
+  background-color: lightpink;
+}
+
+.message {
+  margin: 5px;
 }
 
 .formButton {

@@ -92,6 +92,14 @@ define('app',["exports", "./RxHttpAPI", "Rx", "aurelia-framework"], function (ex
       this.fieldsInError = [];
     }
 
+    App.prototype.attached = function attached() {
+      console.log("view model attached to dom");
+      this.loadDrugs();
+      this.fieldReferenceToComponentMap = { "DRUG": this.drugSelect, "DOSE_AMOUNT": this.doseAmountInput,
+        "DOSE_UNIT": this.doseUnitInput, "ROUTE": this.routeInput, "FREQUENCY": this.frequencyInput,
+        "DURATION": this.durationInput };
+    };
+
     App.prototype.validRx = function validRx() {
       return true;
     };
@@ -118,18 +126,32 @@ define('app',["exports", "./RxHttpAPI", "Rx", "aurelia-framework"], function (ex
       });
     };
 
-    App.prototype.attached = function attached() {
-      console.log("view model attached to dom");
-      this.loadDrugs();
-    };
-
     App.prototype.mapValidationResponse = function mapValidationResponse(response) {
+      this.clearFieldErrors();
       if (response.valid === true) {
         this.successMessage = "Prescription succesfully transmitted.";
-        this.errorMessages = [];
         return;
       }
+      this.successMessage = null;
       this.errorMessages = response.messages;
+      this.markFieldsInError(response.componentsInError);
+    };
+
+    App.prototype.markFieldsInError = function markFieldsInError(rxComponents) {
+      for (var i = 0; i < rxComponents.length; i++) {
+        var field = this.fieldReferenceToComponentMap[rxComponents[i]];
+        if (field) {
+          field.classList.add("error-input");
+        }
+      }
+    };
+
+    App.prototype.clearFieldErrors = function clearFieldErrors() {
+      this.errorMessages = [];
+      for (var fieldReference in this.fieldReferenceToComponentMap) {
+        var field = this.fieldReferenceToComponentMap[fieldReference];
+        field.classList.remove("error-input");
+      }
     };
 
     return App;
@@ -193,5 +215,5 @@ define('resources/index',["exports"], function (exports) {
   exports.configure = configure;
   function configure(config) {}
 });
-define('text!app.html', ['module'], function(module) { module.exports = "<template><div class=\"header\"><h1>Rx Demo</h1></div><form><fieldset><legend>Medication</legend><div class=\"field-column\"><label for=\"medication\">Medication</label><select value.bind=\"currentRx.drug\" id=\"medication\"><option model.bind=\"null\">Choose...</option><option repeat.for=\"drug of availableDrugs\" model.bind=\"drug\">${drug.name}</option></select></div></fieldset><fieldset><legend>Prescription</legend><div class=\"field-column\"><label for=\"dose-amount\">Dose Amount</label><input id=\"dose-amount\" value.bind=\"currentRx.doseAmount\" placeholder=\"Dose Amount\"></div><div class=\"field-column\"><label for=\"dose-unit\">Dose Unit</label><input id=\"dose-unit\" value.bind=\"currentRx.doseUnit\" placeholder=\"Dose Unit\"></div><div class=\"field-column\"><label for=\"route\">Route</label><input id=\"route\" value.bind=\"currentRx.route\" placeholder=\"Route\"></div><div class=\"field-column\"><label for=\"frequency\">Frequency</label><input id=\"frequency\" value.bind=\"currentRx.frequency\" placeholder=\"Frequency\"></div><div class=\"field-column ending-field-column\"><label for=\"duration\">Duration</label><input id=\"duration\" value.bind=\"currentRx.duration\" placeholder=\"Duration\"></div><br class=\"clear\"></fieldset><br><div if.bind=\"errorMessages.length > 0\" class=\"alert\"><div repeat.for=\"message of errorMessages\">${message}</div></div><button class=\"formButton\" click.delegate=\"submitRx()\" disabled.bind=\"!validRx\">Add Rx to Cart</button> <button class=\"formButton\">Cancel</button></form></template>"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template><div class=\"header\"><h1>Rx Demo</h1></div><form><fieldset><legend>Medication</legend><div class=\"field-column\"><label for=\"medication\">Medication</label><select value.bind=\"currentRx.drug\" id=\"medication\" ref=\"drugSelect\"><option model.bind=\"null\">Choose...</option><option repeat.for=\"drug of availableDrugs\" model.bind=\"drug\">${drug.name}</option></select></div></fieldset><fieldset><legend>Prescription</legend><div class=\"field-column\"><label for=\"dose-amount\">Dose Amount</label><input id=\"dose-amount\" ref=\"doseAmountInput\" value.bind=\"currentRx.doseAmount\" placeholder=\"Dose Amount\"></div><div class=\"field-column\"><label for=\"dose-unit\">Dose Unit</label><input id=\"dose-unit\" ref=\"doseUnitInput\" value.bind=\"currentRx.doseUnit\" placeholder=\"Dose Unit\"></div><div class=\"field-column\"><label for=\"route\">Route</label><input id=\"route\" ref=\"routeInput\" value.bind=\"currentRx.route\" placeholder=\"Route\"></div><div class=\"field-column\"><label for=\"frequency\">Frequency</label><input id=\"frequency\" ref=\"frequencyInput\" value.bind=\"currentRx.frequency\" placeholder=\"Frequency\"></div><div class=\"field-column ending-field-column\"><label for=\"duration\">Duration</label><input id=\"duration\" ref=\"durationInput\" value.bind=\"currentRx.duration\" placeholder=\"Duration\"></div><br class=\"clear\"></fieldset><br><div id=\"errorMessages\" if.bind=\"errorMessages.length > 0\" class=\"alert\"><div repeat.for=\"message of errorMessages\" class=\"message\">${message}</div></div><div id=\"successMessages\" if.bind=\"successMessage\" class=\"success\">${successMessage}</div><button class=\"formButton\" click.delegate=\"submitRx()\" disabled.bind=\"!validRx\">Add Rx to Cart</button> <button class=\"formButton\">Cancel</button></form></template>"; });
 //# sourceMappingURL=app-bundle.js.map
