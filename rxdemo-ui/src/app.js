@@ -19,6 +19,7 @@ export class App {
     this.currentRx = new Rx();
     this.errorMessages = [];
     this.fieldsInError = [];
+    this.availableDrugs = [];
   }
 
   attached() {
@@ -44,10 +45,22 @@ export class App {
   }
 
   loadDrugs() {
-    this.rxApi.getDrugs().then(response => response.json()).then(response => {
+    console.log("App.js about to call api to get promise");
+    this.rxApi.getDrugs().then( (response) => {
+      console.log("HERE FINALLY!!!");
       console.log(response);
+      console.log("heh?");
       this.availableDrugs = response;
     });
+    // this.rxApi.getDrugs().then( (response) => {
+    //   response.json();
+    //   console.log("HERE FINALLY!@@@");
+    //   console.log(response);
+    //   this.availableDrugs = response;
+    // }).catch( (error) => {
+    //   console.log("Error occurred resolving promise: ");
+    //   console.log(error);
+    // });
   }
 
   mapValidationResponse(response) {

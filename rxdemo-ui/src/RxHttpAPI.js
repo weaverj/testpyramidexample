@@ -24,7 +24,7 @@ export class RxHttpAPI {
     console.log("Retrieving prescribable drugs from server...");
     return this.http.fetch("drugs", {
       method: "get"
-    });
+    }).then(response => response.json());
   }
 
 }
