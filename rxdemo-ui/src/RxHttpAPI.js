@@ -14,6 +14,7 @@ export class RxHttpAPI {
 
   sendRx(rx) {
     console.log("Submitting Rx to server...");
+    console.log(rx);
     return this.http.fetch("rx", {
       method: "post",
       body: json(rx)

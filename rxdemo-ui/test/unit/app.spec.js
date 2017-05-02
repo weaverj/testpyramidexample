@@ -28,7 +28,6 @@ describe('the prescription building view', () => {
     app.attached();
 
     fetchPromise.then( function() {
-      console.log(app.availableDrugs[0]);
       expect(app.availableDrugs.length).toBe(1);
       expect(app.availableDrugs[0].drugId).toBe("1");
       expect(app.availableDrugs[0].name).toBe("drug1");

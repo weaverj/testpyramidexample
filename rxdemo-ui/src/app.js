@@ -5,34 +5,21 @@ import {inject} from 'aurelia-framework';
 @inject(RxHttpAPI)
 export class App {
 
-  currentRx;
-  availableDrugs;
-  selectedDrug;
-  successMessage;
-  errorMessages;
-  fieldsInError;
-  fieldReferenceToComponentMap;
-
-
   constructor(rxApi) {
     this.rxApi = rxApi;
     this.currentRx = new Rx();
+    this.fieldReferenceToComponentMap = [];
     this.errorMessages = [];
+    this.successMessage = "";
     this.fieldsInError = [];
     this.availableDrugs = [];
   }
 
   attached() {
-    console.log("view model attached to dom");
     this.loadDrugs();
     this.fieldReferenceToComponentMap = {"DRUG" : this.drugSelect, "DOSE_AMOUNT" : this.doseAmountInput,
       "DOSE_UNIT" : this.doseUnitInput, "ROUTE" : this.routeInput, "FREQUENCY" : this.frequencyInput,
       "DURATION" : this.durationInput};
-  }
-
-
-  validRx() {
-    return true;
   }
 
   submitRx() {
@@ -45,22 +32,9 @@ export class App {
   }
 
   loadDrugs() {
-    console.log("App.js about to call api to get promise");
     this.rxApi.getDrugs().then( (response) => {
-      console.log("HERE FINALLY!!!");
-      console.log(response);
-      console.log("heh?");
       this.availableDrugs = response;
     });
-    // this.rxApi.getDrugs().then( (response) => {
-    //   response.json();
-    //   console.log("HERE FINALLY!@@@");
-    //   console.log(response);
-    //   this.availableDrugs = response;
-    // }).catch( (error) => {
-    //   console.log("Error occurred resolving promise: ");
-    //   console.log(error);
-    // });
   }
 
   mapValidationResponse(response) {

@@ -7,7 +7,7 @@ export class Rx {
   duration;
 
   constructor() {
-    this.drug = {};
+    this.drug = null;
     this.doseAmount = "";
     this.doseUnit = "";
     this.route = "";

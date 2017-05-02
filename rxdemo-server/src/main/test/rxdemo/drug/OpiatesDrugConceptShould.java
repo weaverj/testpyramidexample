@@ -27,4 +27,9 @@ public class OpiatesDrugConceptShould {
       Assert.assertFalse(OpiatesDrugConcept.isDrugInConcept(drug));
    }
 
+   @Test
+   public void rejectDrugIfNull() {
+      Assert.assertFalse(OpiatesDrugConcept.isDrugInConcept(null));
+   }
+
 }

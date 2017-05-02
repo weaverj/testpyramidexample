@@ -23,6 +23,10 @@ public class RxEndpoints {
 
       get("/drugs", (request, response) -> DrugDatabase.getDrugsAvailableForPrescribing(), gson::toJson);
 
+      exception(Exception.class, (exception, request, response) -> {
+         exception.printStackTrace();
+         internalServerError("<html><body>" + exception.getMessage() + "</body></html>");
+      });
 
       before((request, response) -> {
          response.header("Access-Control-Allow-Origin", "*");
