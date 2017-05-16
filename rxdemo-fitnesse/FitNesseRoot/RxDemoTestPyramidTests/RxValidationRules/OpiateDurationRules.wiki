@@ -1,8 +1,6 @@
 ---
 Test
 ---
-Opiates Duration Limitiation Rules
-
 Opiates and Benzodiazepenes (!see .RxDemoTestPyramidTests.OpiatesIdentificationRules) may only be prescribed for up to a duration of thirty days.
 
 Scenarios that pass validation:
