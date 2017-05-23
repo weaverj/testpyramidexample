@@ -38,8 +38,8 @@
       <br class="clear">
     </fieldset>
     <br>
-    <div id="errorMessages" if.bind="errorMessages.length > 0" class="alert">
-      <div repeat.for="message of errorMessages" class="message">
+    <div id="errorMessages" if.bind="validationHandler.errorMessages.length > 0" class="alert">
+      <div repeat.for="message of validationHandler.errorMessages" class="message">
         ${message}
       </div>
     </div>

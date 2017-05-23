@@ -2,11 +2,10 @@ import {App} from '../../src/app';
 
 describe('the prescription building view', () => {
 
-  it('has no errors and an empty rx on construction', () => {
-    expect(new App().errorMessages).toEqual([]);
-    expect(new App().fieldsInError).toEqual([]);
+  it('constructs with empty rx, no success message, and no available drugs', () => {
     expect(new App().availableDrugs).toEqual([]);
     expect(new App().currentRx).not.toBeNull();
+    expect(new App().successMessage).toBe("");
   });
 
   it('loads drugs when attached to dom', function(done) {
@@ -34,4 +33,11 @@ describe('the prescription building view', () => {
       done();
     });
   });
+
+  it('displays success message on submit if server validation passes', function() {
+
+  });
+
+
+
 });
