@@ -38,6 +38,9 @@ describe('the prescription building view', () => {
 
   });
 
+  it('clears success message on submit if server validation fails', function() {
+
+  });
 
 
 });

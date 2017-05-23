@@ -18,7 +18,7 @@ export class App {
     let fieldReferenceToComponentMap = {"DRUG" : this.drugSelect, "DOSE_AMOUNT" : this.doseAmountInput,
       "DOSE_UNIT" : this.doseUnitInput, "ROUTE" : this.routeInput, "FREQUENCY" : this.frequencyInput,
       "DURATION" : this.durationInput};
-    this.validationHandler = new RxValidationResponseHandler(this.fieldReferenceToComponentMap);
+    this.validationHandler = new RxValidationResponseHandler(fieldReferenceToComponentMap);
   }
 
   loadDrugs() {
@@ -35,7 +35,7 @@ export class App {
         console.log(response);
         this.validationHandler.processResponse(response);
         if (this.validationHandler.getErrors().length === 0) {
-          this.successMessage = "Prescription succesfully transmitted.";
+          this.successMessage = "Prescription successfully transmitted.";
         }
       });
   }
