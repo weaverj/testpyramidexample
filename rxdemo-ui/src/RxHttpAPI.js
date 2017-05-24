@@ -18,7 +18,7 @@ export class RxHttpAPI {
     return this.http.fetch("rx", {
       method: "post",
       body: json(rx)
-    });
+    }).then(response => response.json());
   }
 
   getDrugs() {

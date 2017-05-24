@@ -30,9 +30,7 @@ export class App {
   submitRx() {
     this.successMessage = "";
     this.rxApi.sendRx(this.currentRx)
-      .then(response => response.json())
       .then(response => {
-        console.log(response);
         this.validationHandler.processResponse(response);
         if (this.validationHandler.getErrors().length === 0) {
           this.successMessage = "Prescription successfully transmitted.";

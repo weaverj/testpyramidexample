@@ -31,7 +31,9 @@ export class RxValidationResponseHandler {
     this.errorMessages = [];
     for (let fieldReference in this.fieldReferenceToComponentMap) {
       let field = this.fieldReferenceToComponentMap[fieldReference];
-      field.classList.remove("error-input");
+      if (field != null) {
+        field.classList.remove("error-input");
+      }
     }
   }
 
