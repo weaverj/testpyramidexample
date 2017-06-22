@@ -1,3 +1,6 @@
 .idea
 /target
 rxdemo-selenium.iml
+/src/test/test.iml
+out/
+src/test/test.iml
