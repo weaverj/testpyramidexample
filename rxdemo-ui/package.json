@@ -49,6 +49,7 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.2.0",
+    "karma-phantomjs-launcher": "^1.0.4",
     "minimatch": "^3.0.2",
     "through2": "^2.0.1",
     "uglify-js": "^2.6.3",
