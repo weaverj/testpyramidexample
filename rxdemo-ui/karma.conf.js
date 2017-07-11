@@ -23,7 +23,10 @@ module.exports = function(config) {
       [project.unitTestRunner.source]: [project.transpiler.id]
     },
     'babelPreprocessor': { options: project.transpiler.options },
-    reporters: ['progress'],
+    reporters: ['progress', 'junit'],
+    junitReporter: {
+      useBrowserName: false
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
