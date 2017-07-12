@@ -10,7 +10,13 @@ Promise.config({
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature('resources');
+    .feature('resources')
+    .plugin('aurelia-configuration', config => {
+      config.setEnvironments({
+        development: ['localhost'],
+        production: ['website.com']
+      });
+    });
 
   if (environment.debug) {
     aurelia.use.developmentLogging();
