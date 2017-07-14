@@ -1,11 +1,10 @@
 package rxdemo;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import page.EnterPrescriptionCommand;
 import page.RxBase;
 import page.RxMedicationPage;
 import util.GetDate;
@@ -30,7 +29,10 @@ public class OpiateUnder30AllowedTest extends RxBase {
         SelectionOptions.dropdownSelectionValue(mDriver,
                 RxConstants.SELECT_DRUG_MEDICATION,
                 RxConstants.SELECT_DRUG_MEDICATION_DIAZEPAM);
-        RxMedicationPage.AddRxAs(RxConstants.INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10)
-                .WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_10).AddRxtoCart(mDriver);
+        RxMedicationPage.AddRxAs().WithDoseAmount(10).WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_TABLET).
+           WithRoute(RxConstants.INPUT_DRUG_MEDICATION_ROUTE_ORAL).WithFrequency(RxConstants.INPUT_DRUG_MEDICATION_ONCE_DAILY_FREQUENCY).
+           WithDuration(RxConstants.INPUT_DRUG_MEDICATION_DURATION_29_DAYS).AddRxtoCart(mDriver);
+
+        Assert.assertTrue(RxMedicationPage.showsSuccessMessage(mDriver));
     }
 }

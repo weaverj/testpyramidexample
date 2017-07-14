@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>org.vmc.App</start-class>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <spring-boot-legacy.version>1.0.1.RELEASE</spring-boot-legacy.version>
         <appengine.target.version>1.9.17</appengine.target.version>
         <hibernate-validator.version>4.3.2.Final</hibernate-validator.version>

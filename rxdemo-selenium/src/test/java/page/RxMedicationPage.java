@@ -17,16 +17,27 @@ public class RxMedicationPage {
     }
 
     public static boolean isAt(WebDriver mDriver) {
-        List<WebElement> we = mDriver.findElements(xpath(RxConstants.H1_TITLE_RX_DEMO));
+        Boolean we1 = textInElement(mDriver, RxConstants.H1_TITLE_RX_DEMO, RxConstants.H1_TITLE_RX_DEMO_TEXT);
+        if (we1 != null) return we1;
+        return false;
+    }
+
+    private static Boolean textInElement(WebDriver mDriver, String xpath, String expectedText) {
+        List<WebElement> we = mDriver.findElements(xpath(xpath));
         if (we.size() > 0) {
             for (int i = 0; i < we.size(); i++)
             {
                 System.out.println(we.get(i).getTagName() + ": '" + we.get(i).getText() + " was Verified!");
             }
-
-            return (we.get(0).getText().equals(RxConstants.H1_TITLE_RX_DEMO_TEXT) ||
+            return (we.get(0).getText().equals(expectedText) ||
                     (we.get(0).isEnabled()));
         }
+        return null;
+    }
+
+    public static boolean showsSuccessMessage(WebDriver mDriver) {
+        Boolean we1 = textInElement(mDriver, RxConstants.SUCCESS_MESSAGE, "Prescription successfully transmitted.");
+        if (we1 != null) return we1;
         return false;
     }
 
@@ -47,8 +58,9 @@ public class RxMedicationPage {
                 RxConstants.BTN_RX_ADD_RX_TO_CART_TEXT);
     }
 
-    public static EnterPrescriptionCommand AddRxAs(String doseamount)
+    public static EnterPrescriptionCommand AddRxAs()
     {
-        return new EnterPrescriptionCommand(doseamount);
+        return new EnterPrescriptionCommand();
     }
+
 }

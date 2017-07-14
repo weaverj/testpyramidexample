@@ -29,7 +29,7 @@ public class OpiateOver30NotAllowedTest extends RxBase {
         SelectionOptions.dropdownSelectionValue(mDriver,
                 RxConstants.SELECT_DRUG_MEDICATION,
                 RxConstants.SELECT_DRUG_MEDICATION_DIAZEPAM);
-        RxMedicationPage.AddRxAs(RxConstants.INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10)
-                .WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_100).AddRxtoCart(mDriver);
+//        RxMedicationPage.AddRxAs(RxConstants.INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10)
+//                .WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_100).AddRxtoCart(mDriver);
     }
 }

@@ -7,7 +7,7 @@ public class RxConstants {
     //http://localhost:9000/
     public static final String RX_BASE_URL = "localhost:9000/";
 
-    public static final String SELENIUM_SERVER_FOR_L_CHROME = "10.248.75.33";
+    public static final String SELENIUM_SERVER_FOR_L_CHROME = "localhost";
 
     public static final String H1_TITLE_RX_DEMO = "/html/body/div/h1";
     public static final String H1_TITLE_RX_DEMO_TEXT = "Rx Demo";
@@ -21,8 +21,12 @@ public class RxConstants {
     public static final String INPUT_DRUG_MEDICATION_DOSE_AMOUNT = "dose-amount";
     public static final String INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10 = "10";
     public static final String INPUT_DRUG_MEDICATION_DOSE_UNIT = "dose-unit";
-    public static final String INPUT_DRUG_MEDICATION_DOSE_UNIT_10 = "10";
-    public static final String INPUT_DRUG_MEDICATION_DOSE_UNIT_100 = "tablet";
+    public static final String INPUT_DRUG_MEDICATION_DOSE_UNIT_TABLET = "tablet";
+    public static final String INPUT_DRUG_MEDICATION_ROUTE_ORAL = "Oral";
+    public static final String INPUT_DRUG_MEDICATION_DURATION_29_DAYS = "29 days";
+    public static String INPUT_DRUG_MEDICATION_ONCE_DAILY_FREQUENCY = "once per day";
+
+    public static final String SUCCESS_MESSAGE = "//*[@id=\'successMessages\']";
 
     public static final String BTN_RX_ADD_RX_TO_CART = "/html/body/form/button[1]";
     public static final String BTN_RX_ADD_RX_TO_CART_TEXT = "Add Rx to Cart";
@@ -40,5 +44,8 @@ public class RxConstants {
 
     public static final String MESSAGE_FAILED_TO_LAUNCH = "Failed to Launch Home Page!";
     public static final String MESSAGE_BUTTONS_UNAVAILABLE = "Buttons are not Available!";
+
+    public static final String SUCCESSFUL_PRESCRIPTION = "Prescription successfully transmitted.";
+
 
 }
