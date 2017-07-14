@@ -46,4 +46,9 @@ public class RxMedicationPage {
                 RxConstants.BTN_RX_ADD_RX_TO_CART,
                 RxConstants.BTN_RX_ADD_RX_TO_CART_TEXT);
     }
+
+    public static EnterPrescriptionCommand AddRxAs(String doseamount)
+    {
+        return new EnterPrescriptionCommand(doseamount);
+    }
 }
