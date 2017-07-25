@@ -1,5 +1,8 @@
 {
   "name": "default non-env specific properties go here",
+  "api": {
+    "endpoint": "http://custom-env.n8hkqfngwz.us-east-2.elasticbeanstalk.com/"
+  },
   "development": {
     "api": {
       "endpoint": "http://localhost:4567/"
@@ -7,7 +10,7 @@
   },
   "production": {
     "api": {
-      "endpoint": "http://localhost/api/v1"
+      "endpoint": "http://custom-env.n8hkqfngwz.us-east-2.elasticbeanstalk.com/"
     }
   }
 }

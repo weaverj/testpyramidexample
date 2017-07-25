@@ -3,3 +3,6 @@ node_modules
 .DS_STORE
 /scripts/
 /redemo-ui.iml
+/Dockerfile
+/TESTS.xml
+/rxdemo-ui.zip

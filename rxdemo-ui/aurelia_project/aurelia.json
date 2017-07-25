@@ -134,6 +134,11 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
+          },
+          {
+            "name": "aurelia-configuration",
+            "path": "../node_modules/aurelia-configuration/dist/amd",
+            "main": "index"
           }
         ]
       }

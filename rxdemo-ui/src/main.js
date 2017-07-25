@@ -14,7 +14,7 @@ export function configure(aurelia) {
     .plugin('aurelia-configuration', config => {
       config.setEnvironments({
         development: ['localhost'],
-        production: ['website.com']
+        production: ['rxdemoui-env.hweggypgnu.us-east-2.elasticbeanstalk.com']
       });
     });
 
