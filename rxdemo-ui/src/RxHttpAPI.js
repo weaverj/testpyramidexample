@@ -1,13 +1,18 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient, json} from 'aurelia-fetch-client';
+import {AureliaConfiguration} from 'aurelia-configuration';
 
 
-@inject(HttpClient)
+@inject(HttpClient, AureliaConfiguration)
 export class RxHttpAPI {
 
-  constructor(http) {
+  apiRootUrl;
+
+  constructor(http, config) {
+    this.apiRootUrl = config.get('api.endpoint');
+    console.log("RxHttpAPI configured with URL: " + this.apiRootUrl);
     http.configure(config => {
-      config.withBaseUrl("http://localhost:4567/");
+      config.withBaseUrl(this.apiRootUrl);
     });
     this.http = http;
   }

@@ -1,0 +1,13 @@
+{
+  "name": "default non-env specific properties go here",
+  "development": {
+    "api": {
+      "endpoint": "http://localhost:4567/"
+    }
+  },
+  "production": {
+    "api": {
+      "endpoint": "http://localhost/api/v1"
+    }
+  }
+}
