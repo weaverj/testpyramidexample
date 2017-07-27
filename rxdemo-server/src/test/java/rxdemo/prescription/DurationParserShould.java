@@ -26,5 +26,15 @@ public class DurationParserShould {
       assertEquals(1, DurationParser.parseDays("Once"));
    }
 
+   @Test
+   public void returnZeroIfNoParts() {
+      assertEquals(0, DurationParser.parseDays(""));
+   }
+
+   @Test
+   public void returnZeroIfMoreThanTwoParts() {
+      assertEquals(0, DurationParser.parseDays("1 2 days"));
+   }
+
 
 }

@@ -9,3 +9,6 @@ Exact list of classes follows, with drugs in the vendor drug database currently 
 |582                   |Analgesics - Narcotic                          |              |
 |523                   |Antianxiety Agent - Benzodiazepines            |              |
 |338                   |Narcotic Antitussive-Antihistamine Combinations|              |
+
+|Comment                   |
+|301|Nasal Corticosteroids||
