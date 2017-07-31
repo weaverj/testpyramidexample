@@ -36,7 +36,17 @@ public class RxMedicationPage {
     }
 
     public static boolean showsSuccessMessage(WebDriver mDriver) {
-        Boolean we1 = textInElement(mDriver, RxConstants.SUCCESS_MESSAGE, "Prescription successfully transmitted.");
+        Boolean we1 = textInElement(mDriver, RxConstants.SUCCESS_MESSAGE,
+                "Prescription successfully transmitted.");
+        if (we1 != null) return we1;
+        return false;
+    }
+
+    public static boolean showProhibitedMessage(WebDriver mDriver) {
+        Boolean we1 = textInElement(mDriver, RxConstants.PROHIBITED_MESSAGE,
+                "Prescibing opioids and benzodiazepines in quantities " +
+                        "greater than a 30-day supply is prohibited. " +
+                        "Refills may be used to extend the intended duration of treatment.");
         if (we1 != null) return we1;
         return false;
     }

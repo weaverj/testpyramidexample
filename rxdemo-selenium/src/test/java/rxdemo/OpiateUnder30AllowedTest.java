@@ -29,9 +29,13 @@ public class OpiateUnder30AllowedTest extends RxBase {
         SelectionOptions.dropdownSelectionValue(mDriver,
                 RxConstants.SELECT_DRUG_MEDICATION,
                 RxConstants.SELECT_DRUG_MEDICATION_DIAZEPAM);
-        RxMedicationPage.AddRxAs().WithDoseAmount(10).WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_TABLET).
-           WithRoute(RxConstants.INPUT_DRUG_MEDICATION_ROUTE_ORAL).WithFrequency(RxConstants.INPUT_DRUG_MEDICATION_ONCE_DAILY_FREQUENCY).
-           WithDuration(RxConstants.INPUT_DRUG_MEDICATION_DURATION_29_DAYS).AddRxtoCart(mDriver);
+        RxMedicationPage.AddRxAs()
+                .WithDoseAmount(10)
+                .WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_TABLET)
+                .WithRoute(RxConstants.INPUT_DRUG_MEDICATION_ROUTE_ORAL)
+                .WithFrequency(RxConstants.INPUT_DRUG_MEDICATION_FREQUENCY_ONCE_DAILY)
+                .WithDuration(RxConstants.INPUT_DRUG_MEDICATION_DURATION_29_DAYS)
+                .AddRxtoCart(mDriver);
 
         Assert.assertTrue(RxMedicationPage.showsSuccessMessage(mDriver));
     }

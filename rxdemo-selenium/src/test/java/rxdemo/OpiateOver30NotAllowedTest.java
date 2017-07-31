@@ -1,6 +1,6 @@
 package rxdemo;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -21,7 +21,6 @@ public class OpiateOver30NotAllowedTest extends RxBase {
     public void opiateOver30NotAllowedTest()
             throws Exception {
 
-        String jsDate = GetDate.getSimpleFormatCurrentDate();
         Assert.assertTrue(RxConstants.MESSAGE_FAILED_TO_LAUNCH ,
                 RxMedicationPage.isAt(mDriver));
         RxMedicationPage.verifyButtonsIsEnabled(mDriver);
@@ -29,7 +28,14 @@ public class OpiateOver30NotAllowedTest extends RxBase {
         SelectionOptions.dropdownSelectionValue(mDriver,
                 RxConstants.SELECT_DRUG_MEDICATION,
                 RxConstants.SELECT_DRUG_MEDICATION_DIAZEPAM);
-//        RxMedicationPage.AddRxAs(RxConstants.INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10)
-//                .WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_100).AddRxtoCart(mDriver);
+        RxMedicationPage.AddRxAs()
+                .WithDoseAmount(10)
+                .WithDoseUnit(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT_TABLET)
+                .WithRoute(RxConstants.INPUT_DRUG_MEDICATION_ROUTE_ORAL)
+                .WithFrequency(RxConstants.INPUT_DRUG_MEDICATION_FREQUENCY_ONCE_DAILY)
+                .WithDuration(RxConstants.INPUT_DRUG_MEDICATION_DURATION_31_DAYS)
+                .AddRxtoCart(mDriver);
+
+        Assert.assertTrue(RxMedicationPage.showProhibitedMessage(mDriver));
     }
 }

@@ -19,15 +19,19 @@ public class RxConstants {
     public static final String SELECT_DRUG_MEDICATION = "medication";
     public static final String SELECT_DRUG_MEDICATION_DIAZEPAM = "diazepam";
     public static final String INPUT_DRUG_MEDICATION_DOSE_AMOUNT = "dose-amount";
-    public static final String INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10 = "10";
+    //public static final String INPUT_DRUG_MEDICATION_DOSE_AMOUNT_10 = "10";
     public static final String INPUT_DRUG_MEDICATION_DOSE_UNIT = "dose-unit";
     public static final String INPUT_DRUG_MEDICATION_DOSE_UNIT_TABLET = "tablet";
+    public static final String INPUT_DRUG_MEDICATION_ROUTE = "route";
     public static final String INPUT_DRUG_MEDICATION_ROUTE_ORAL = "Oral";
+    public static final String INPUT_DRUG_MEDICATION_DURATION = "duration";
     public static final String INPUT_DRUG_MEDICATION_DURATION_29_DAYS = "29 days";
-    public static String INPUT_DRUG_MEDICATION_ONCE_DAILY_FREQUENCY = "once per day";
+    public static final String INPUT_DRUG_MEDICATION_DURATION_31_DAYS = "31 days";
+    public static final String INPUT_DRUG_MEDICATION_FREQUENCY = "frequency";
+    public static final String INPUT_DRUG_MEDICATION_FREQUENCY_ONCE_DAILY = "once per day";
 
     public static final String SUCCESS_MESSAGE = "//*[@id=\'successMessages\']";
-
+    public static final String PROHIBITED_MESSAGE = "//*[@id=\'errorMessages\']";
     public static final String BTN_RX_ADD_RX_TO_CART = "/html/body/form/button[1]";
     public static final String BTN_RX_ADD_RX_TO_CART_TEXT = "Add Rx to Cart";
     public static final String BTN_CANCEL = "/html/body/form/button[2]";

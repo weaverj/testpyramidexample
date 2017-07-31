@@ -54,6 +54,9 @@ public class EnterPrescriptionCommand
     {
         mDriver.findElement(id( RxConstants.INPUT_DRUG_MEDICATION_DOSE_AMOUNT)).sendKeys(String.valueOf(doseamount));;
         mDriver.findElement(id(RxConstants.INPUT_DRUG_MEDICATION_DOSE_UNIT)).sendKeys(doseunit);
+        mDriver.findElement(id(RxConstants.INPUT_DRUG_MEDICATION_ROUTE)).sendKeys(route);
+        mDriver.findElement(id(RxConstants.INPUT_DRUG_MEDICATION_FREQUENCY)).sendKeys(frequency);
+        mDriver.findElement(id(RxConstants.INPUT_DRUG_MEDICATION_DURATION)).sendKeys(duration);
         WaitForObjects.waitUntilxpath(mDriver, RxConstants.BTN_RX_ADD_RX_TO_CART);
         ButtonClick.buttonClickByXpath(mDriver,
                 RxConstants.BTN_RX_ADD_RX_TO_CART,
