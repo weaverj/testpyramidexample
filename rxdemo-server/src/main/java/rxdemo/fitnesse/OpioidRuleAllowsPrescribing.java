@@ -1,5 +1,6 @@
 package rxdemo.fitnesse;
 
+import org.apache.commons.lang3.StringUtils;
 import rxdemo.prescription.validation.OpiateDurationValidationRule;
 import rxdemo.prescription.Prescription;
 import rxdemo.prescription.validation.RxValidationResult;
@@ -19,6 +20,10 @@ public class OpioidRuleAllowsPrescribing {
 
    public String message() {
       return result.getMessage();
+   }
+
+   public String componentsInvalid() {
+      return StringUtils.join(result.getComponentsInvalid(), ",");
    }
 
    public void setDrug(String drug) {

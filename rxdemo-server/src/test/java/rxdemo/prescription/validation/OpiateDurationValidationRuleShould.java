@@ -26,7 +26,18 @@ public class OpiateDurationValidationRuleShould {
       RxValidationResult result = rule.validateAgainstRule(rx);
 
       assertFalse(result.isValid());
+   }
+
+   @Test
+   public void returnAppropriateMessageAndComponentIfDurationInvalid() {
+      rx.setDuration("31 days");
+      rx.setDrug(DrugDatabase.getDrugByName("oxycodone"));
+
+      RxValidationResult result = rule.validateAgainstRule(rx);
+
       assertEquals(OpiateDurationValidationRule.MESSAGE, result.getMessage());
+      assertEquals(1, result.getComponentsInvalid().size());
+      assertTrue(result.getComponentsInvalid().contains(ERxComponent.DURATION));
    }
 
    @Test

@@ -68,5 +68,9 @@ public class RequiredRxFieldPresent {
       return result.getMessage();
    }
 
+   public String componentsInvalid() {
+      return StringUtils.join(result.getComponentsInvalid(), ", ");
+   }
+
 
 }

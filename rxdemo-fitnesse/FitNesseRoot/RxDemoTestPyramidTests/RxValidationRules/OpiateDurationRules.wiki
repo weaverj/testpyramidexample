@@ -8,16 +8,16 @@ Opiates and Benzodiazepenes (!see .RxDemoTestPyramidTests.OpiatesIdentificationR
 
 Scenarios that pass validation:
 
-|Decision: opioid rule allows prescribing                             |
-|drug     |duration|valid?|message?|#comment                          |
-|methadone|10 days |true  |        |opioid under 30 days - no error   |
-|oxycodone|30 days |true  |        |opioid at 30 days - no error      |
-|aspirin  |40 days |true  |        |non-opioid over 30 days - no error|
+|Decision: opioid rule allows prescribing                                                 |
+|drug     |duration|valid?|message?|components invalid?|#comment                          |
+|methadone|10 days |true  |        |                   |opioid under 30 days - no error   |
+|oxycodone|30 days |true  |        |                   |opioid at 30 days - no error      |
+|aspirin  |40 days |true  |        |                   |non-opioid over 30 days - no error|
 
 
 Stop user from prescribing in these Scenarios:
 
-|Decision: opioid rule allows prescribing                                                                                                                                                                                      |
-|drug     |duration|valid?|message?                                                                                                                                                           |#comment                        |
-|methadone|31 days |false |Prescribing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod over 30 days              |
-|methadone|6 dags  |false |Prescribing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod with unrecognized duration|
+|Decision: opioid rule allows prescribing                                                                                                                                                                                                          |
+|drug     |duration|valid?|message?                                                                                                                                                           |components invalid?|#comment                        |
+|methadone|31 days |false |Prescribing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|DURATION           |opiod over 30 days              |
+|methadone|6 dags  |false |Prescribing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|DURATION           |opiod with unrecognized duration|

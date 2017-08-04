@@ -6,25 +6,25 @@ Test
 
 Drug/Medication must be specified.
 
-|Required Rx Field Present                                                                                    |
-|Drug      |Dose Amount|Dose Unit|Frequency    |Route|Duration|valid?|message?                                |
-|Prednisone|2          |tablets  |twice per day|oral |10 days |true  |                                        |
-|          |2          |tablets  |twice per day|oral |10 days |false |The following fields are required: Drug.|
+|Required Rx Field Present                                                                                                        |
+|Drug      |Dose Amount|Dose Unit|Frequency    |Route|Duration|valid?|message?                                |components invalid?|
+|Prednisone|2          |tablets  |twice per day|oral |10 days |true  |                                        |                   |
+|          |2          |tablets  |twice per day|oral |10 days |false |The following fields are required: Drug.|DRUG               |
 
 
 Prescription components dose amount/unit, frequency, route, and duration must all be specified.
 
-|Required Rx Field Present                                                                                           |
-|Drug      |Dose Amount|Dose Unit|Frequency    |Route|Duration|valid?|message?                                       |
-|Prednisone|           |tablets  |twice per day|oral |10 days |false |The following fields are required: Dose Amount.|
-|Prednisone|2          |         |twice per day|oral |10 days |false |The following fields are required: Dose Unit.  |
-|Prednisone|2          |tablets  |             |oral |10 days |false |The following fields are required: Frequency.  |
-|Prednisone|2          |tablets  |twice per day|     |10 days |false |The following fields are required: Route.      |
-|Prednisone|2          |tablets  |twice per day|oral |        |false |The following fields are required: Duration.   |
+|Required Rx Field Present                                                                                                               |
+|Drug      |Dose Amount|Dose Unit|Frequency    |Route|Duration|valid?|message?                                       |components invalid?|
+|Prednisone|           |tablets  |twice per day|oral |10 days |false |The following fields are required: Dose Amount.|DOSE_AMOUNT        |
+|Prednisone|2          |         |twice per day|oral |10 days |false |The following fields are required: Dose Unit.  |DOSE_UNIT          |
+|Prednisone|2          |tablets  |             |oral |10 days |false |The following fields are required: Frequency.  |FREQUENCY          |
+|Prednisone|2          |tablets  |twice per day|     |10 days |false |The following fields are required: Route.      |ROUTE              |
+|Prednisone|2          |tablets  |twice per day|oral |        |false |The following fields are required: Duration.   |DURATION           |
 
 
 Multiple missing fields reported with single message
 
-|Required Rx Field Present                                                                                                                              |
-|Drug|Dose Amount|Dose Unit|Frequency|Route|Duration|valid?|message?                                                                                    |
-|    |           |         |         |     |        |false |The following fields are required: Dose Amount, Dose Unit, Frequency, Route, Duration, Drug.|
+|Required Rx Field Present                                                                                                                                                                                       |
+|Drug|Dose Amount|Dose Unit|Frequency|Route|Duration|valid?|message?                                                                                    |components invalid?                                     |
+|    |           |         |         |     |        |false |The following fields are required: Dose Amount, Dose Unit, Frequency, Route, Duration, Drug.|DOSE_AMOUNT, DOSE_UNIT, FREQUENCY, ROUTE, DURATION, DRUG|
