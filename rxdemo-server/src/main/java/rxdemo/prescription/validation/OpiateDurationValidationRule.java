@@ -5,10 +5,8 @@ import rxdemo.prescription.Prescription;
 
 public class OpiateDurationValidationRule implements IRxValidationRule {
 
-   public static final String MESSAGE = "Prescibing opioids and benzodiazepines in quantities greater than a 30-day" +
+   public static final String MESSAGE = "Prescribing opioids and benzodiazepines in quantities greater than a 30-day" +
       " supply is prohibited. Refills may be used to extend the intended duration of treatment.";
-
-   // add free text dosing feature to make this more complex?
 
    @Override
    public RxValidationResult validateAgainstRule(Prescription rx) {

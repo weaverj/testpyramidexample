@@ -17,7 +17,7 @@ Scenarios that pass validation:
 
 Stop user from prescribing in these Scenarios:
 
-|Decision: opioid rule allows prescribing                                                                                                                                                                                     |
-|drug     |duration|valid?|message?                                                                                                                                                          |#comment                        |
-|methadone|31 days |false |Prescibing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod over 30 days              |
-|methadone|6 dags  |false |Prescibing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod with unrecognized duration|
+|Decision: opioid rule allows prescribing                                                                                                                                                                                      |
+|drug     |duration|valid?|message?                                                                                                                                                           |#comment                        |
+|methadone|31 days |false |Prescribing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod over 30 days              |
+|methadone|6 dags  |false |Prescribing opioids and benzodiazepines in quantities greater than a 30-day supply is prohibited. Refills may be used to extend the intended duration of treatment.|opiod with unrecognized duration|
