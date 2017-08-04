@@ -11,7 +11,7 @@ public class DispensableDrug {
    private String name;
    private Set<EDrugClassification> classifications;
 
-   public DispensableDrug(int drugId, String name, EDrugClassification[] classifications) {
+   public DispensableDrug(int drugId, String name, EDrugClassification...classifications) {
       this.drugId = drugId;
       this.name = name;
       this.classifications = new HashSet<>();
