@@ -9,7 +9,7 @@
         <label for="medication">Medication</label>
         <select value.bind="currentRx.drug" id="medication" ref="drugSelect">
           <option model.bind="null">Choose...</option>
-          <option repeat.for="drug of availableDrugs" model.bind="drug">${drug.name}</option>
+          <option repeat.for="drug of availableDrugs" model.bind="drug" value.bind="drug.name">${drug.name}</option>
         </select>
       </div>
     </fieldset>

@@ -6,3 +6,4 @@ node_modules
 /Dockerfile
 /TESTS.xml
 /rxdemo-ui.zip
+/dist/
