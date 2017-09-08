@@ -5,3 +5,7 @@
 /Dockerfile
 /deployment/
 out/
+/core/core.iml
+/rest/rest.iml
+/rest/target/
+/core/target/
