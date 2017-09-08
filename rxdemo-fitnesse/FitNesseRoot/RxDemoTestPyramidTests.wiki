@@ -10,5 +10,4 @@ Suite
 
 
 !define TEST_SYSTEM {slim}
-!path ../rxdemo-server/target/classes
 !path lib/*.jar

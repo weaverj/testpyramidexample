@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>testpyramid</groupId>
     <artifactId>rxdemo-server</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <version>1.0.0</version>
     <build>
         <finalName>rxdemo-server</finalName>
