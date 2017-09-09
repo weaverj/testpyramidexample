@@ -67,7 +67,7 @@ public class DrugDatabase {
       drugsInDatabase.add(new DispensableDrug(1000, "simvastatin",
          new EDrugClassification[]{EDrugClassification.ANTIHYPERLIPIDEMICS}));
 
-      drugsInDatabase.add(new DispensableDrug(1100, "cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
+      drugsInDatabase.add(new DispensableDrug(1100, "more cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
    }
 
 
