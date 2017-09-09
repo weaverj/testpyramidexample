@@ -60,6 +60,7 @@
   "scripts": {
     "dist": "./node_modules/gulp/bin/gulp.js dist",
     "run" : "./node_modules/aurelia-cli/bin/aurelia-cli.js run",
+    "test" : "./node_modules/aurelia-cli/bin/aurelia-cli.js test",
     "build" : "./node_modules/aurelia-cli/bin/aurelia-cli.js build",
     "build-dist" : "npm run-script build && npm run-script dist"
   }
