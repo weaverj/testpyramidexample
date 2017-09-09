@@ -1,9 +1,10 @@
 let gulp = require('gulp');
-let clean = require('gulp-clean');
+let del = require('del');
 
-gulp.task("clean-dist", function() {
-  return gulp.src('dist/', {read: false})
-    .pipe(clean());
+gulp.task('clean-dist', function () {
+  return del([
+    'dist/'
+  ]);
 });
 
 gulp.task("copy", function() {

@@ -9,8 +9,15 @@
   "license": "MIT",
   "dependencies": {
     "aurelia-animator-css": "^1.0.1",
+    "aurelia-framework": "^1.0.0",
+    "aurelia-history-browser": "^1.0.0",
+    "aurelia-pal-browser": "^1.0.0",
+    "aurelia-templating-binding": "^1.0.0",
+    "aurelia-polyfills": "^1.0.0",
+    "aurelia-loader-default": "^1.0.0",
     "aurelia-bootstrapper": "^2.1.0",
     "aurelia-configuration": "^1.0.17",
+    "aurelia-logging-console": "^1.0.0",
     "aurelia-fetch-client": "^1.1.2",
     "bluebird": "^3.4.1",
     "requirejs": "^2.3.2",
@@ -20,6 +27,8 @@
   "peerDependencies": {},
   "devDependencies": {
     "aurelia-cli": "^0.26.1",
+    "aurelia-templating-resources": "^1.0.0",
+    "aurelia-templating-router": "^1.0.0",
     "aurelia-testing": "^1.0.0-beta.2.0.1",
     "aurelia-tools": "^1.0.0",
     "babel-eslint": "^6.0.4",
@@ -34,6 +43,7 @@
     "babel-register": "^6.9.0",
     "browser-sync": "^2.13.0",
     "connect-history-api-fallback": "^1.2.0",
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-changed-in-place": "^2.0.3",
@@ -59,9 +69,9 @@
   },
   "scripts": {
     "dist": "./node_modules/gulp/bin/gulp.js dist",
-    "run" : "./node_modules/aurelia-cli/bin/aurelia-cli.js run",
-    "test" : "./node_modules/aurelia-cli/bin/aurelia-cli.js test",
-    "build" : "./node_modules/aurelia-cli/bin/aurelia-cli.js build",
-    "build-dist" : "npm run-script build && npm run-script dist"
+    "run": "./node_modules/aurelia-cli/bin/aurelia-cli.js run",
+    "test": "./node_modules/aurelia-cli/bin/aurelia-cli.js test",
+    "build": "./node_modules/aurelia-cli/bin/aurelia-cli.js build",
+    "build-dist": "npm run-script build && npm run-script dist"
   }
 }
