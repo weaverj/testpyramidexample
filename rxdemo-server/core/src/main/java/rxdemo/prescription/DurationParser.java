@@ -12,7 +12,7 @@ public class DurationParser {
       }
       else if (parts.length == 1)
       {
-         if (parts[0].equalsIgnoreCase("once")) return 1;
+         if (parts[0].equalsIgnoreCase("one")) return 1;
       }
       return 0;
    }
