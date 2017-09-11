@@ -14,6 +14,7 @@ export function configure(aurelia) {
     .plugin('aurelia-configuration', config => {
       config.setEnvironments({
         development: ['localhost'],
+        tomcatlocal: ['localhost:8090/rxdemo-ui'],
         production: ['rxdemoui-env.hweggypgnu.us-east-2.elasticbeanstalk.com']
       });
     });

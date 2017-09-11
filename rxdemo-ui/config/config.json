@@ -5,6 +5,11 @@
   },
   "development": {
     "api": {
+      "endpoint": "http://localhost:4567/"
+    }
+  },
+  "tomcatlocal" : {
+    "api": {
       "endpoint": "http://localhost:8090/rxdemo-api/"
     }
   },

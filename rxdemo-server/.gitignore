@@ -9,3 +9,5 @@ out/
 /rest/rest.iml
 /rest/target/
 /core/target/
+/rest/rxdemo-server-rest.iml
+/core/rxdemo-server-core.iml
