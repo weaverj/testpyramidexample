@@ -5,7 +5,8 @@ public class RxConstants {
     public static final String RX_ITEM = "Rx APP";
 
     //http://localhost:9000/
-    public static final String RX_BASE_URL = "localhost:8090/rxdemo";
+//    public static final String RX_BASE_URL = "localhost:8090/rxdemo";
+    public static final String RX_BASE_URL = "localhost:9000";
 
     public static final String SELENIUM_SERVER_FOR_L_CHROME = "localhost";
 
