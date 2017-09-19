@@ -13,6 +13,11 @@
       "endpoint": "http://localhost:8090/rxdemo-api/"
     }
   },
+  "tomcatlocaltest" : {
+    "api": {
+      "endpoint": "http://localhost:8090/rxdemo-api-test/"
+    }
+  },
   "production": {
     "api": {
       "endpoint": "http://custom-env.n8hkqfngwz.us-east-2.elasticbeanstalk.com/"

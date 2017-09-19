@@ -8,15 +8,33 @@ Promise.config({
 });
 
 export function configure(aurelia) {
+
+  function calculateEnvironment(href) {
+    if (href.indexOf("localhost:8090/rxdemo-test") !== -1) {
+      return "tomcatlocaltest";
+    }
+    if (href.indexOf("localhost:8090/rxdemo") !== -1) {
+      return "tomcatlocal";
+    }
+    if (href.indexOf("localhost") !== -1) {
+      return "development";
+    }
+    if (href.indexOf("elasticbeanstalk") !== -1) {
+      return "production";
+    }
+
+
+  }
+
   aurelia.use
     .standardConfiguration()
     .feature('resources')
     .plugin('aurelia-configuration', config => {
-      config.setEnvironments({
-        development: ['localhost'],
-        tomcatlocal: ['localhost:8090/rxdemo-ui'],
-        production: ['rxdemoui-env.hweggypgnu.us-east-2.elasticbeanstalk.com']
-      });
+      console.log("In main.js bootstrap.");
+      console.log(window.location.href);
+      let environmentName = calculateEnvironment(window.location.href);
+      console.log("Setting environment to: " + environmentName);
+      config.setEnvironment(environmentName);
     });
 
   if (environment.debug) {

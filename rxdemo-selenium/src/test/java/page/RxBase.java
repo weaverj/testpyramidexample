@@ -64,8 +64,16 @@ public class RxBase {
         mDriver = new RemoteWebDriver(new URL("http://" + mAddress
                 + ":4444/wd/hub"), mDC);
         SetupRx.setupRx(mDriver,
-                URL1, URL2,
+                getEnvironmentUrl(), URL2,
                 mBrowserName, mItemName);
+    }
+
+    private String getEnvironmentUrl() {
+        String envUrl = System.getenv("RXDEMO_CLIENT_URL");
+        if ((envUrl == null) || ("".equals(envUrl))) {
+           return URL1;
+        }
+        return envUrl;
     }
 
     @After
