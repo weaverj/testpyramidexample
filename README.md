@@ -12,7 +12,7 @@ This project illustrates the Test Pyramid testing strategy published by Mike Coh
 A powerpoint presentation is at the root directory.
 
 ## Running RxDemo Server
-You will need Java 1.8.x or higher and Maven 3 or higher installed.  You should be able to do a "java -version" and "maven -version" from command line.
+You will need Java 1.8.x or higher and Maven 3 or higher installed.  You should be able to do a "java -version" and "mvn -version" from command line.
 
 - cd to the rxdemo-server subdirectory and perform a "mvn clean install" operation.
 - cd to the rxdemo-server/rest subdirectory and perform a "mvn exec:java".
