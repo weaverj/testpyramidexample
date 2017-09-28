@@ -10,7 +10,7 @@ This project illustrates the Test Pyramid testing strategy published by Mike Coh
 - **RxDemo Selenium**: This is a java / maven3 sub-application containing only selenium tests to verify the UI of the example features via a browser.
 
 ## Running RxDemo Server
-- You will need Java 1.8.x or higher and Maven 3 or higher installed.  You should be able to do a "java -version" and "maven -version" from command line.
+You will need Java 1.8.x or higher and Maven 3 or higher installed.  You should be able to do a "java -version" and "maven -version" from command line.
 
 - cd to the rxdemo-server subdirectory and perform a "mvn clean install" operation.
 - cd to the rxdemo-server/rest subdirectory and perform a "mvn exec:java".
