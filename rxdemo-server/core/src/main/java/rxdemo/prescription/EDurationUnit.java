@@ -26,7 +26,8 @@ public enum EDurationUnit {
 
    public static EDurationUnit getByTextValue(String textValue) {
       for (EDurationUnit unit : EDurationUnit.values()) {
-         if ((unit.singularForm.equals(textValue.toLowerCase())) || (unit.pluralForm.equals(textValue.toLowerCase()))) {
+         if ((unit.singularForm.equals(textValue.toLowerCase())) ||
+            (unit.pluralForm.equals(textValue.toLowerCase()))) {
             return unit;
          }
       }

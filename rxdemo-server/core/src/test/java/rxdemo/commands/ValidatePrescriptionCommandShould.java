@@ -30,7 +30,8 @@ public class ValidatePrescriptionCommandShould {
 
       invalidRule1 = Mockito.mock(IRxValidationRule.class);
       Mockito.when(invalidRule1.validateAgainstRule(rx)).thenReturn(
-         invalidResult("Error Message 1", ERxComponent.DOSE_AMOUNT, ERxComponent.DURATION));
+         invalidResult("Error Message 1", ERxComponent.DOSE_AMOUNT,
+            ERxComponent.DURATION));
 
       invalidRule2 = Mockito.mock(IRxValidationRule.class);
       Mockito.when(invalidRule2.validateAgainstRule(rx)).thenReturn(
@@ -75,7 +76,8 @@ public class ValidatePrescriptionCommandShould {
 
    @Test
    public void includeAllComponentsAndMessagesIfMultipleRulesInError() {
-      RxValidator validator = buildValidatorWithRules(alwaysValidRule, invalidRule1, invalidRule2);
+      RxValidator validator = buildValidatorWithRules(alwaysValidRule, invalidRule1,
+         invalidRule2);
       ValidatePrescriptionCommand command = new ValidatePrescriptionCommand(validator);
 
       ValidatePrescriptionResponse response = command.validatePrescription(rx);

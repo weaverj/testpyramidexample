@@ -21,7 +21,8 @@ public class OpiatesDrugConcept {
       if (drug == null) {
          return false;
       }
-      HashSet<EDrugClassification> opiateClassesForThisDrug = new HashSet<>(drug.getClassifications());
+      HashSet<EDrugClassification> opiateClassesForThisDrug = new HashSet<>(
+         drug.getClassifications());
       opiateClassesForThisDrug.retainAll(Arrays.asList(opiateClasses));
       return !opiateClassesForThisDrug.isEmpty();
    }

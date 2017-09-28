@@ -15,19 +15,21 @@ import static org.mockito.Mockito.when;
 public class RxValidatorShould {
 
    @Test
-   public void returnsNoResultsIfRulesProvidedIsNull() {
+   public void returnNoResultsIfRulesProvidedIsNull() {
       RxValidator validator = new RxValidator(null);
 
-      List<RxValidationResult> results = validator.validatePrescription(new Prescription());
+      List<RxValidationResult> results = validator.validatePrescription(
+         new Prescription());
 
       assertTrue(results.isEmpty());
    }
 
    @Test
-   public void returnsNoResultsIfRulesProvidedIsEmpty() {
+   public void returnNoResultsIfRulesProvidedIsEmpty() {
       RxValidator validator = new RxValidator(new ArrayList<>());
 
-      List<RxValidationResult> results = validator.validatePrescription(new Prescription());
+      List<RxValidationResult> results = validator.validatePrescription(
+         new Prescription());
 
       assertTrue(results.isEmpty());
    }
@@ -40,7 +42,8 @@ public class RxValidatorShould {
       rules.add(buildValidationRule());
       RxValidator validator = new RxValidator(rules);
 
-      List<RxValidationResult> results = validator.validatePrescription(new Prescription());
+      List<RxValidationResult> results = validator.validatePrescription(
+         new Prescription());
 
       assertEquals(2, results.size());
 
@@ -48,7 +51,8 @@ public class RxValidatorShould {
 
    private IRxValidationRule buildValidationRule() {
       IRxValidationRule rule = mock(IRxValidationRule.class);
-      when(rule.validateAgainstRule(any(Prescription.class))).thenReturn(new RxValidationResult());
+      when(rule.validateAgainstRule(any(Prescription.class))).thenReturn(
+         new RxValidationResult());
       return rule;
    }
 

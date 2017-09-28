@@ -8,8 +8,8 @@ public class DispensableDrugShould {
 
    @Test
    public void beConstructableWithListOfClassifications() {
-      DispensableDrug drug = new DispensableDrug(1, "testdrug", EDrugClassification.ANALGESIC,
-         EDrugClassification.ANTIANXIETY);
+      DispensableDrug drug = new DispensableDrug(1, "testdrug",
+         EDrugClassification.ANALGESIC, EDrugClassification.ANTIANXIETY);
       Assert.assertEquals(1, drug.getDrugId());
       Assert.assertEquals("testdrug", drug.getName());
       Assert.assertEquals(2, drug.getClassifications().size());
