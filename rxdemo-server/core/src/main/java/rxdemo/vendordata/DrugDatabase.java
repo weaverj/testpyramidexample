@@ -48,7 +48,7 @@ public class DrugDatabase {
          new EDrugClassification[]{EDrugClassification.ANALGESIC, EDrugClassification.PLATELET_AGGREGATION_INHIBITORS}));
       drugsInDatabase.add(new DispensableDrug(200, "bactrim",
          new EDrugClassification[]{EDrugClassification.ANTIBACTERIAL}));
-      drugsInDatabase.add(new DispensableDrug(300, "diazepam",
+      drugsInDatabase.add(new DispensableDrug(300, "diazepamgit ",
          new EDrugClassification[]{EDrugClassification.ANTIANXIETY}));
       drugsInDatabase.add(new DispensableDrug(400, "fluticasone",
          new EDrugClassification[]{EDrugClassification.NASAL_CORTICOSTEROIDS}));
@@ -68,7 +68,7 @@ public class DrugDatabase {
          new EDrugClassification[]{EDrugClassification.ANTIHYPERLIPIDEMICS}));
 
       drugsInDatabase.add(new DispensableDrug(1100, "cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
-      //drugsInDatabase.add(new DispensableDrug(1200, "more cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
+      drugsInDatabase.add(new DispensableDrug(1200, "more cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
    }
 
 
