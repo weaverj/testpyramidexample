@@ -68,7 +68,7 @@ public class DrugDatabase {
          new EDrugClassification[]{EDrugClassification.ANTIHYPERLIPIDEMICS}));
 
       drugsInDatabase.add(new DispensableDrug(1100, "cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
-      //drugsInDatabase.add(new DispensableDrug(1200, "more cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
+      drugsInDatabase.add(new DispensableDrug(1200, "more cowbell", new EDrugClassification[] {EDrugClassification.ANALGESIC}));
    }
 
 
