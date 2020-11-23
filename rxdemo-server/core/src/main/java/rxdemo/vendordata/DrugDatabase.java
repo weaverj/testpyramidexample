@@ -46,8 +46,6 @@ public class DrugDatabase {
       drugsInDatabase = new ArrayList<>();
       drugsInDatabase.add(new DispensableDrug(100, "aspirin",
          new EDrugClassification[]{EDrugClassification.ANALGESIC, EDrugClassification.PLATELET_AGGREGATION_INHIBITORS}));
-      drugsInDatabase.add(new DispensableDrug(150, "another-aspirin",
-              new EDrugClassification[]{EDrugClassification.ANALGESIC, EDrugClassification.PLATELET_AGGREGATION_INHIBITORS}));
       drugsInDatabase.add(new DispensableDrug(200, "bactrim",
          new EDrugClassification[]{EDrugClassification.ANTIBACTERIAL}));
       drugsInDatabase.add(new DispensableDrug(300, "diazepam",
