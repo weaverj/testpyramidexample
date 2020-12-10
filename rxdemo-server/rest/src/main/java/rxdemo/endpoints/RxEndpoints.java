@@ -10,7 +10,6 @@ import spark.Response;
 
 import static spark.Spark.*;
 
-// triggering a build
 
 public class RxEndpoints {
    public static void initalizeEndpoints() {
