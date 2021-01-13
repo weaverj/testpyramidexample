@@ -1,0 +1,95 @@
+---
+version: 2
+plan:
+  project-key: RXDEM
+  key: MAIN
+  name: RxDemo Server Main
+stages:
+- Checkout and Build Stage:
+    manual: false
+    final: false
+    jobs:
+    - Default Job
+- Verify:
+    manual: false
+    final: false
+    jobs:
+    - Dependency Check
+    - Fitnesse
+Default Job:
+  key: JOB1
+  tasks:
+  - checkout:
+      force-clean-build: 'false'
+  - maven:
+      executable: Maven 3
+      jdk: JDK 1.8
+      goal: clean install
+      tests: 'true'
+      working-dir: rxdemo-server
+  artifacts:
+  - name: Uber jar for testing
+    location: rxdemo-server/core/target
+    pattern: rxdemo-server-jar-with-dependencies.jar
+    shared: true
+    required: true
+  - name: War for deployment
+    location: rxdemo-server/rest/target
+    pattern: rxdemo-api.war
+    shared: true
+    required: true
+Dependency Check:
+  key: DC
+  tasks:
+# Checkout Task will be added implicitly during Specs import
+  - artifact-download:
+      artifacts:
+      - name: Uber jar for testing
+# com.atlassian.bamboo.plugins.scripttask:task.builder.script is disabled. This state is not supported at YAML
+  artifacts:
+  - name: Dependency Check Report
+    pattern: dependency-check-report.html
+    shared: false
+    required: true
+Fitnesse:
+  key: FIT
+  tasks:
+# Checkout Task will be added implicitly during Specs import
+  - artifact-download:
+      artifacts:
+      - name: Uber jar for testing
+  - script:
+      interpreter: SHELL
+      scripts:
+      - cp -f *.jar /Users/jimweaver/Projects/bamboo-pluralsight/testpyramidexample/rxdemo-fitnesse/lib
+# com.atlassian.bamboo.plugins.scripttask:task.builder.script is disabled. This state is not supported at YAML
+# com.atlassian.bamboo.plugins.testresultparser:task.testresultparser.junit is disabled. This state is not supported at YAML
+triggers:
+- polling: 180
+branches:
+  create: manually
+  delete: never
+  link-to-jira: true
+notifications: []
+labels: []
+other:
+  concurrent-build-plugin: system-default
+---
+version: 2
+plan:
+  key: RXDEM-MAIN
+plan-permissions:
+- roles:
+  - logged-in
+  - anonymous
+  permissions:
+  - view
+- users:
+  - jimweaver
+  permissions:
+  - view
+  - edit
+  - build
+  - clone
+  - admin
+...
