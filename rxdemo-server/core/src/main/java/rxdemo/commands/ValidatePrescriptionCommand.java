@@ -6,6 +6,7 @@ import rxdemo.prescription.validation.RxValidator;
 
 import java.util.List;
 
+// add a comments.
 public class ValidatePrescriptionCommand {
 
    private RxValidator validator;
