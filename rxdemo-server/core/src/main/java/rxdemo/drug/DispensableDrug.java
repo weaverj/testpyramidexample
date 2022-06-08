@@ -5,7 +5,7 @@ import rxdemo.vendordata.EDrugClassification;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
+// comments the drug file
 public class DispensableDrug {
    private int drugId;
    private String name;
