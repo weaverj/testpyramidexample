@@ -49,3 +49,5 @@ Fitnesse should be accessible via browser at localhost:8080.  You can navigate d
 - Run unit test in rxdemo-selenium test/java/rxdemo 
 - expected port for UI to be running on is localhost 9000, but this can be modifed via RxConstants in rxdemo-selenium.
 
+
+Trigger builds

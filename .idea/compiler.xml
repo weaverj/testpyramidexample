@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rxdemo-server-rest" />
+        <module name="rxdemo-selenium" />
+        <module name="rxdemo-server-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rxdemo-selenium" target="1.5" />
+      <module name="rxdemo-server" target="1.8" />
+      <module name="rxdemo-server-core" target="1.8" />
+      <module name="rxdemo-server-rest" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
