@@ -1,0 +1,27 @@
+branch-defaults:
+  aws-lift-and-shift:
+    environment: Rxdemoapi-env
+  production:
+     environment: Rxdemoapi-prod
+  dev:
+    environment: Rxdemoapi-env
+  staging:
+    environment: Rxdemoapi-staging
+environment-defaults:
+  Rxdemoapi-env:
+    branch: null
+    repository: null
+global:
+  application_name: RxDemo-API
+  default_ec2_keyname: tomcat-dev
+  default_platform: Tomcat 8.5 with Corretto 11 running on 64bit Amazon Linux 2
+  default_region: eu-west-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  sc: git
+  workspace_type:
+deploy:
+  artifact: rxdemo-server/rest/target/rxdemo-api.war
