@@ -11,3 +11,8 @@ out/
 /core/target/
 /rest/rxdemo-server-rest.iml
 /core/rxdemo-server-core.iml
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
